@@ -1,4 +1,4 @@
-# Homework 1 Snake RL (Gymnasium + SB3 + WandB)
+# Homework 1 - Snake RL (Gymnasium + SB3 + WandB)
 
 Minimal Snake environment compatible with Gymnasium and Stable-Baselines3, plus
 a PPO training script with Weights & Biases logging.
