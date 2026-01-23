@@ -62,11 +62,18 @@ https://wandb.ai/cmorris8273-ohio-university/snake-rl/reports/Snake-Game-Benchma
 
 Included videos (by algorithm):
 
-![PPO video](Homework1/videos/ppo.gif)
-
-![A2C video](Homework1/videos/a2c.gif)
-
-![DQN video](Homework1/videos/dqn.gif)
+<table>
+  <tr>
+    <th>PPO</th>
+    <th>A2C</th>
+    <th>DQN</th>
+  </tr>
+  <tr>
+    <td><img src="Homework1/video/ppo.gif" alt="PPO video"></td>
+    <td><img src="Homework1/video/a2c.gif" alt="A2C video"></td>
+    <td><img src="Homework1/video/dqn.gif" alt="DQN video"></td>
+  </tr>
+</table>
 
 ## Tests
 
