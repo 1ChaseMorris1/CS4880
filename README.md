@@ -1,93 +1,52 @@
-# Homework 1 - Snake RL (Gymnasium + SB3 + WandB)
+# Project Assignment 2: The Gambler's Dilemma (K-Armed Bandits)
 
-Minimal Snake environment compatible with Gymnasium and Stable-Baselines3, plus
-a PPO training script with Weights & Biases logging.
+This folder contains a full implementation of a **10-armed bandit** experiment using an **epsilon-greedy** agent.
 
-## Project layout
+## LLM Usage
+- LLM used: **OpenAI GPT-5 (Codex)**
 
-```
-snake_rl/
-  envs/
-    snake_env.py
-  train.py
-  requirements.txt
-  README.md
-```
+## What is implemented
+- 10-armed stationary bandit environment.
+- Reward model per arm: `R ~ Normal(mu_arm, 1)`.
+- True arm means sampled once per run: `mu_arm ~ Normal(0, 1)`.
+- Epsilon-greedy action selection.
+- Two action-value update modes:
+  - Constant step-size: `alpha = 0.1`
+  - Sample-average: `alpha = 1 / n`
+- Required hyperparameter sweep:
+  - `epsilon`: `0.0`, `0.01`, `0.1`
+  - `Q1`: `0`, `5`
+  - `alpha mode`: `constant`, `sample_average`
 
-## Environment design
+## Metrics logged
+At each step, the experiment records:
+- `average_reward`
+- `percent_optimal_action`
+- `average_cumulative_regret`
 
-- Grid-based observation `(grid_size, grid_size)` with float32 values:
-  - `0.0` empty
-  - `0.5` snake body
-  - `1.0` food
-- Actions: `0=up`, `1=right`, `2=down`, `3=left`
-- Rewards:
-  - Food eaten: `+1`
-  - Collision: `-1` and episode terminates
-  - Step penalty (dense): `-0.01`, sparse: `0`
+## How to run
+1. Install dependencies:
+   ```bash
+   pip install -r Homework2/requirements.txt
+   ```
+2. Run all experiments (offline WandB mode by default):
+   ```bash
+   make -C Homework2 run
+   ```
 
-## Training
-
-Default algorithm: PPO with `MlpPolicy`. Training uses WandB for metrics.
-
-Run: `python train.py`
-
-Makefile shortcuts: `make install`, `make wandb-login`, `make train`
-
-Optional environment variables:
-
-- `GRID_SIZE` (default `10`)
-- `REWARD_TYPE` (`dense` or `sparse`, default `dense`)
-- `TOTAL_TIMESTEPS` (default `200000`)
-- `ALGORITHMS` (comma-separated, e.g. `ppo,a2c,dqn`)
-- `RECORD_VIDEO` (`1` to log videos)
-- `VIDEO_DIR` (default `videos`)
-- `LOG_VIDEO_EVERY_STEPS` (default `50000`, ~4 videos per 200k steps)
-- `VIDEO_SECONDS` (default `60`)
-- `VIDEO_LENGTH` (default `0`, computed from `VIDEO_SECONDS` and env FPS)
-
-Outputs:
-
-- WandB run with episode reward and length over timesteps
-- PPO loss curves from the default SB3 logs
-- Saved model at `snake_<algo>.zip`
-- Algorithm comparison in WandB when using `ALGORITHMS`
-- Recorded videos synced to WandB
-
-WandB report:
-
-```
-https://wandb.ai/cmorris8273-ohio-university/snake-rl/reports/Snake-Game-Benchmark--VmlldzoxNTcyODA0Mg?accessToken=9jlhdn7abc9qfk5qkkb7twtvu90ae35n1d7i4z3t4z5sszycksuntyfelwhwf7x0
+Or run directly:
+```bash
+python3 Homework2/bandit_experiment.py --steps 2000 --runs 200 --wandb-mode offline
 ```
 
-Included videos (by algorithm):
+To log to WandB cloud:
+```bash
+wandb login
+make -C Homework2 run-online
+```
 
-<table>
-  <tr>
-    <th>PPO</th>
-    <th>A2C</th>
-    <th>DQN</th>
-  </tr>
-  <tr>
-    <td><img src="Homework1/videos/ppo.gif" alt="PPO video"></td>
-    <td><img src="Homework1/videos/a2c.gif" alt="A2C video"></td>
-    <td><img src="Homework1/videos/dqn.gif" alt="DQN video"></td>
-  </tr>
-</table>
+## Outputs
+- Per-configuration CSV files in `Homework2/results/`
+- Aggregate run summary in `Homework2/results/summary.json`
 
-## Tests
-
-Run the test suite with pytest: `pytest -q`
-
-Coverage includes Gymnasium API compliance, reward logic, collisions, food spawning,
-determinism, and an SB3 `DummyVecEnv` smoke test.
-
-## Experiments to try
-
-- Dense vs. sparse rewards
-- Scaling grid size for difficulty and generalization
-
-## GenAI usage note
-
-Code scaffold generated using OpenAI Codex.
-Code created with the assistance of gpt-5.2-codex.
+There are 12 CSV files total (3 epsilon values x 2 initializations x 2 alpha modes).
