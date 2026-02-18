@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.venv/
+
+# Local setup/runtime stamps
+.setup.stamp
+
+# W&B runtime output
+.wandb/
+wandb/
+
+# Generated benchmark/report artifacts
+chasebot/report/benchmark-results.tsv
+chasebot/report/wandb-meta.txt
+chasebot/report/images/
+chasebot/report/videos/
+chasebot/report/pa3-report.md
+
+# Java build artifacts (if generated locally in this repo)
+*.class
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
