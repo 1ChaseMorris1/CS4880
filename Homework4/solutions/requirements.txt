@@ -1,0 +1,2 @@
+# No third-party package is required for the default heuristic workflow.
+# OpenAI API calls use Python stdlib urllib.

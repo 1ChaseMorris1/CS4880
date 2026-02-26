@@ -1,0 +1,354 @@
+{
+  "summary": [
+    {
+      "matchup": "baseline_vs_llm",
+      "iterations": 10,
+      "games": 80,
+      "agent_a": "baseline-mcts-10",
+      "agent_b": "llm-mcts-10",
+      "a_wins": 9,
+      "draws": 20,
+      "b_wins": 51,
+      "a_win_rate": 0.1125,
+      "draw_rate": 0.25,
+      "b_win_rate": 0.6375
+    },
+    {
+      "matchup": "baseline_vs_minimax",
+      "iterations": 10,
+      "games": 30,
+      "agent_a": "baseline-mcts-10",
+      "agent_b": "minimax",
+      "a_wins": 0,
+      "draws": 7,
+      "b_wins": 23,
+      "a_win_rate": 0.0,
+      "draw_rate": 0.2333,
+      "b_win_rate": 0.7667
+    },
+    {
+      "matchup": "llm_vs_minimax",
+      "iterations": 10,
+      "games": 30,
+      "agent_a": "llm-mcts-10",
+      "agent_b": "minimax",
+      "a_wins": 0,
+      "draws": 13,
+      "b_wins": 17,
+      "a_win_rate": 0.0,
+      "draw_rate": 0.4333,
+      "b_win_rate": 0.5667
+    },
+    {
+      "matchup": "baseline_vs_llm",
+      "iterations": 50,
+      "games": 80,
+      "agent_a": "baseline-mcts-50",
+      "agent_b": "llm-mcts-50",
+      "a_wins": 1,
+      "draws": 54,
+      "b_wins": 25,
+      "a_win_rate": 0.0125,
+      "draw_rate": 0.675,
+      "b_win_rate": 0.3125
+    },
+    {
+      "matchup": "baseline_vs_minimax",
+      "iterations": 50,
+      "games": 30,
+      "agent_a": "baseline-mcts-50",
+      "agent_b": "minimax",
+      "a_wins": 0,
+      "draws": 21,
+      "b_wins": 9,
+      "a_win_rate": 0.0,
+      "draw_rate": 0.7,
+      "b_win_rate": 0.3
+    },
+    {
+      "matchup": "llm_vs_minimax",
+      "iterations": 50,
+      "games": 30,
+      "agent_a": "llm-mcts-50",
+      "agent_b": "minimax",
+      "a_wins": 0,
+      "draws": 30,
+      "b_wins": 0,
+      "a_win_rate": 0.0,
+      "draw_rate": 1.0,
+      "b_win_rate": 0.0
+    },
+    {
+      "matchup": "baseline_vs_llm",
+      "iterations": 100,
+      "games": 80,
+      "agent_a": "baseline-mcts-100",
+      "agent_b": "llm-mcts-100",
+      "a_wins": 2,
+      "draws": 70,
+      "b_wins": 8,
+      "a_win_rate": 0.025,
+      "draw_rate": 0.875,
+      "b_win_rate": 0.1
+    },
+    {
+      "matchup": "baseline_vs_minimax",
+      "iterations": 100,
+      "games": 30,
+      "agent_a": "baseline-mcts-100",
+      "agent_b": "minimax",
+      "a_wins": 0,
+      "draws": 22,
+      "b_wins": 8,
+      "a_win_rate": 0.0,
+      "draw_rate": 0.7333,
+      "b_win_rate": 0.2667
+    },
+    {
+      "matchup": "llm_vs_minimax",
+      "iterations": 100,
+      "games": 30,
+      "agent_a": "llm-mcts-100",
+      "agent_b": "minimax",
+      "a_wins": 0,
+      "draws": 28,
+      "b_wins": 2,
+      "a_win_rate": 0.0,
+      "draw_rate": 0.9333,
+      "b_win_rate": 0.0667
+    },
+    {
+      "matchup": "baseline_vs_llm",
+      "iterations": 500,
+      "games": 80,
+      "agent_a": "baseline-mcts-500",
+      "agent_b": "llm-mcts-500",
+      "a_wins": 0,
+      "draws": 79,
+      "b_wins": 1,
+      "a_win_rate": 0.0,
+      "draw_rate": 0.9875,
+      "b_win_rate": 0.0125
+    },
+    {
+      "matchup": "baseline_vs_minimax",
+      "iterations": 500,
+      "games": 30,
+      "agent_a": "baseline-mcts-500",
+      "agent_b": "minimax",
+      "a_wins": 0,
+      "draws": 27,
+      "b_wins": 3,
+      "a_win_rate": 0.0,
+      "draw_rate": 0.9,
+      "b_win_rate": 0.1
+    },
+    {
+      "matchup": "llm_vs_minimax",
+      "iterations": 500,
+      "games": 30,
+      "agent_a": "llm-mcts-500",
+      "agent_b": "minimax",
+      "a_wins": 0,
+      "draws": 30,
+      "b_wins": 0,
+      "a_win_rate": 0.0,
+      "draw_rate": 1.0,
+      "b_win_rate": 0.0
+    }
+  ],
+  "move_metrics": [
+    {
+      "matchup": "baseline_vs_llm",
+      "iterations": 10,
+      "agent": "baseline-mcts-10",
+      "moves": 258,
+      "avg_estimated_value": 0.6905,
+      "avg_ms_per_iteration": 0.015944
+    },
+    {
+      "matchup": "baseline_vs_llm",
+      "iterations": 10,
+      "agent": "llm-mcts-10",
+      "moves": 273,
+      "avg_estimated_value": 0.7734,
+      "avg_ms_per_iteration": 0.007794
+    },
+    {
+      "matchup": "baseline_vs_minimax",
+      "iterations": 10,
+      "agent": "baseline-mcts-10",
+      "moves": 103,
+      "avg_estimated_value": 0.7039,
+      "avg_ms_per_iteration": 0.016056
+    },
+    {
+      "matchup": "baseline_vs_minimax",
+      "iterations": 10,
+      "agent": "minimax",
+      "moves": 113,
+      "avg_estimated_value": 0.6991,
+      "avg_ms_per_iteration": 0.0
+    },
+    {
+      "matchup": "llm_vs_minimax",
+      "iterations": 10,
+      "agent": "llm-mcts-10",
+      "moves": 113,
+      "avg_estimated_value": 0.6663,
+      "avg_ms_per_iteration": 0.007147
+    },
+    {
+      "matchup": "llm_vs_minimax",
+      "iterations": 10,
+      "agent": "minimax",
+      "moves": 119,
+      "avg_estimated_value": 0.5966,
+      "avg_ms_per_iteration": 0.0
+    },
+    {
+      "matchup": "baseline_vs_llm",
+      "iterations": 50,
+      "agent": "baseline-mcts-50",
+      "moves": 314,
+      "avg_estimated_value": 0.5802,
+      "avg_ms_per_iteration": 0.014541
+    },
+    {
+      "matchup": "baseline_vs_llm",
+      "iterations": 50,
+      "agent": "llm-mcts-50",
+      "moves": 317,
+      "avg_estimated_value": 0.6539,
+      "avg_ms_per_iteration": 0.00926
+    },
+    {
+      "matchup": "baseline_vs_minimax",
+      "iterations": 50,
+      "agent": "baseline-mcts-50",
+      "moves": 125,
+      "avg_estimated_value": 0.622,
+      "avg_ms_per_iteration": 0.013419
+    },
+    {
+      "matchup": "baseline_vs_minimax",
+      "iterations": 50,
+      "agent": "minimax",
+      "moves": 126,
+      "avg_estimated_value": 0.5913,
+      "avg_ms_per_iteration": 0.0
+    },
+    {
+      "matchup": "llm_vs_minimax",
+      "iterations": 50,
+      "agent": "llm-mcts-50",
+      "moves": 135,
+      "avg_estimated_value": 0.6713,
+      "avg_ms_per_iteration": 0.008229
+    },
+    {
+      "matchup": "llm_vs_minimax",
+      "iterations": 50,
+      "agent": "minimax",
+      "moves": 135,
+      "avg_estimated_value": 0.5,
+      "avg_ms_per_iteration": 0.0
+    },
+    {
+      "matchup": "baseline_vs_llm",
+      "iterations": 100,
+      "agent": "baseline-mcts-100",
+      "moves": 347,
+      "avg_estimated_value": 0.5542,
+      "avg_ms_per_iteration": 0.01503
+    },
+    {
+      "matchup": "baseline_vs_llm",
+      "iterations": 100,
+      "agent": "llm-mcts-100",
+      "moves": 347,
+      "avg_estimated_value": 0.6364,
+      "avg_ms_per_iteration": 0.010862
+    },
+    {
+      "matchup": "baseline_vs_minimax",
+      "iterations": 100,
+      "agent": "baseline-mcts-100",
+      "moves": 123,
+      "avg_estimated_value": 0.5892,
+      "avg_ms_per_iteration": 0.014009
+    },
+    {
+      "matchup": "baseline_vs_minimax",
+      "iterations": 100,
+      "agent": "minimax",
+      "moves": 123,
+      "avg_estimated_value": 0.5732,
+      "avg_ms_per_iteration": 0.0
+    },
+    {
+      "matchup": "llm_vs_minimax",
+      "iterations": 100,
+      "agent": "llm-mcts-100",
+      "moves": 132,
+      "avg_estimated_value": 0.6432,
+      "avg_ms_per_iteration": 0.010637
+    },
+    {
+      "matchup": "llm_vs_minimax",
+      "iterations": 100,
+      "agent": "minimax",
+      "moves": 132,
+      "avg_estimated_value": 0.5114,
+      "avg_ms_per_iteration": 0.0
+    },
+    {
+      "matchup": "baseline_vs_llm",
+      "iterations": 500,
+      "agent": "baseline-mcts-500",
+      "moves": 359,
+      "avg_estimated_value": 0.5442,
+      "avg_ms_per_iteration": 0.014897
+    },
+    {
+      "matchup": "baseline_vs_llm",
+      "iterations": 500,
+      "agent": "llm-mcts-500",
+      "moves": 359,
+      "avg_estimated_value": 0.553,
+      "avg_ms_per_iteration": 0.011844
+    },
+    {
+      "matchup": "baseline_vs_minimax",
+      "iterations": 500,
+      "agent": "baseline-mcts-500",
+      "moves": 132,
+      "avg_estimated_value": 0.5765,
+      "avg_ms_per_iteration": 0.016403
+    },
+    {
+      "matchup": "baseline_vs_minimax",
+      "iterations": 500,
+      "agent": "minimax",
+      "moves": 132,
+      "avg_estimated_value": 0.5341,
+      "avg_ms_per_iteration": 0.0
+    },
+    {
+      "matchup": "llm_vs_minimax",
+      "iterations": 500,
+      "agent": "llm-mcts-500",
+      "moves": 135,
+      "avg_estimated_value": 0.614,
+      "avg_ms_per_iteration": 0.01199
+    },
+    {
+      "matchup": "llm_vs_minimax",
+      "iterations": 500,
+      "agent": "minimax",
+      "moves": 135,
+      "avg_estimated_value": 0.5,
+      "avg_ms_per_iteration": 0.0
+    }
+  ]
+}

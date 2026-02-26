@@ -1,0 +1,22 @@
+# Local environment and secrets
+.env
+venv/
+.setup.stamp
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Generated experiment outputs
+solutions/summary/llm_cache.json
+solutions/summary/summary.csv
+solutions/summary/move_metrics.csv
+solutions/summary/summary.json
+solutions/summary/run_config.json
+solutions/summary/REPORT.md
+solutions/summary/SLIDES.md
+solutions/summary/figures/*.svg
+
+# Keep the folders tracked
+!solutions/summary/.gitkeep
+!solutions/summary/figures/.gitkeep

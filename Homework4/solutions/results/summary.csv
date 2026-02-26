@@ -1,0 +1,13 @@
+matchup,iterations,games,agent_a,agent_b,a_wins,draws,b_wins,a_win_rate,draw_rate,b_win_rate
+baseline_vs_llm,10,80,baseline-mcts-10,llm-mcts-10,9,20,51,0.1125,0.25,0.6375
+baseline_vs_minimax,10,30,baseline-mcts-10,minimax,0,7,23,0.0,0.2333,0.7667
+llm_vs_minimax,10,30,llm-mcts-10,minimax,0,13,17,0.0,0.4333,0.5667
+baseline_vs_llm,50,80,baseline-mcts-50,llm-mcts-50,1,54,25,0.0125,0.675,0.3125
+baseline_vs_minimax,50,30,baseline-mcts-50,minimax,0,21,9,0.0,0.7,0.3
+llm_vs_minimax,50,30,llm-mcts-50,minimax,0,30,0,0.0,1.0,0.0
+baseline_vs_llm,100,80,baseline-mcts-100,llm-mcts-100,2,70,8,0.025,0.875,0.1
+baseline_vs_minimax,100,30,baseline-mcts-100,minimax,0,22,8,0.0,0.7333,0.2667
+llm_vs_minimax,100,30,llm-mcts-100,minimax,0,28,2,0.0,0.9333,0.0667
+baseline_vs_llm,500,80,baseline-mcts-500,llm-mcts-500,0,79,1,0.0,0.9875,0.0125
+baseline_vs_minimax,500,30,baseline-mcts-500,minimax,0,27,3,0.0,0.9,0.1
+llm_vs_minimax,500,30,llm-mcts-500,minimax,0,30,0,0.0,1.0,0.0
